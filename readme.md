@@ -1,4 +1,4 @@
-
+IGNORA O README
 
                 switch case
                 select * from usuario
@@ -14,4 +14,5 @@
                 <p><strong>Email:</strong> ${prof.email_prof}</p>
                 <p><strong>Matéria:</strong> ${prof.materia}</p>
                 <p><strong>Turma:</strong> ${prof.nome_turma}</p>
+
                 <hr>
