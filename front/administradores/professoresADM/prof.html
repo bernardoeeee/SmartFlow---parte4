@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de professores - ADM</title>
+    <link rel="icon" href="/front/assets/Logo_Laranja.png">
+    <link rel="stylesheet" href="./prof.css">
+</head>
+
+<body>
+    <header>
+        <a href="../adm.html" style="text-decoration: none; position: absolute; left: 2%;"><i
+                class="fa-solid fa-arrow-right fa-flip-horizontal fa-2x"
+                style="color: var(--cor-laranjaDetalhes);"></i></a>
+        <h1>Professores</h1>
+    </header>
+
+    <div class="container">
+        <div class="modal">
+
+            <div class="formProfessor">
+                <label for="Email">Email profissional</label>
+                <div class="input-line"><input type="email" id="email" required></div>
+                <label for="name">Nome completo</label>
+                <div class="input-line"><input type="text" id="nome"></div>
+                <label for="data">Data de nascimento</label>
+                <div class="input-line"><input type="date" id="nasc"></div>
+                <label for="text">Senha</label>
+                <div class="input-line"><input type="password" id="senha"></div>
+                <label for="text">Materia</label>
+                <div class="input-line"><input type="text" id="materia"></div>
+                <label>Turmas</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="1A"> 1A</label>
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="1B"> 1B</label>
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="2A"> 2A</label>
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="2B"> 2B</label>
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="3A"> 3A</label>
+                    <label><input type="checkbox" id="turmaValue" name="turmas" value="3B"> 3B</label>
+                </div>
+
+
+
+                <button class="cadastrarProfessor" onclick="cadastrarProfessor(event)">Cadastrar professor</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="modal">
+            <h2>Professores cadastrados</h2>
+            <div class="professoresCadastrados" id="professoresCadastrados">
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="modal">
+            <h2>Turmas cadastradas</h2>
+            <div class="professoresCadastrados" id="checkboxTurmas">
+                
+            </div>
+        </div>
+    </div> -->
+
+    <script src="prof.js"></script>
+    <script src="https://kit.fontawesome.com/8a3618c51f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor</title>
+    <link rel="icon" href="../assets/Logo_Laranja.png">
+    <link rel="stylesheet" href="./prof.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Professor</h1>
+    </header>
+
+    <div class="container">
+        <!-- Turmas alocadas -->
+        <div class="Card">
+            <h2>Minhas Turmas</h2>
+            <ul id="lista-turmas">
+                <!-- Exemplo de turmas, substitua por dados dinâmicos -->
+                <li><button class="turma-btn" onclick="selecionarTurma('Turma A')">Turma A</button></li>
+                <li><button class="turma-btn" onclick="selecionarTurma('Turma B')">Turma B</button></li>
+                <li><button class="turma-btn" onclick="selecionarTurma('Turma C')">Turma C</button></li>
+            </ul>
+        </div>
+
+        <!-- Alunos da turma selecionada -->
+        <div class="Card" id="turma-detalhes" style="display:none;">
+            <h2 id="nome-turma">Turma Selecionada</h2>
+            <ul id="lista-alunos">
+                <!-- Exemplo de alunos, substitua por dados dinâmicos -->
+                <li>
+                    <span>Aluno 1</span>
+                    <select class="chamada">
+                        <option value="presente">Presente</option>
+                        <option value="falta">Falta</option>
+                    </select>
+                    <input type="number" class="nota" placeholder="Nota 1" min="0" max="10">
+                    <input type="number" class="nota" placeholder="Nota 2" min="0" max="10">
+                    <input type="number" class="nota" placeholder="Média Final" min="0" max="10">
+                </li>
+                <li>
+                    <span>Aluno 2</span>
+                    <select class="chamada">
+                        <option value="presente">Presente</option>
+                        <option value="falta">Falta</option>
+                    </select>
+                    <input type="number" class="nota" placeholder="Nota 1" min="0" max="10">
+                    <input type="number" class="nota" placeholder="Nota 2" min="0" max="10">
+                    <input type="number" class="nota" placeholder="Média Final" min="0" max="10">
+                </li>
+            </ul>
+            <button class="entrar" onclick="salvarChamadaNotas()">Salvar</button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a03d84a9ee.js" crossorigin="anonymous"></script>
+    <script src="prof.js"></script>
+</body>
+
+</html>

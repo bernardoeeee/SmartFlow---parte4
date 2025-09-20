@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de turmas - ADM</title>
+    <link rel="icon" href="/front/assets/Logo_Laranja.png">
+    <link rel="stylesheet" href="./turmas.css">
+</head>
+
+<body>
+    <header>
+        <a href="../adm.html" style="text-decoration: none; position: absolute; left: 2%;"><i
+                class="fa-solid fa-arrow-right fa-flip-horizontal fa-2x"
+                style="color: var(--cor-laranjaDetalhes);"></i></a>
+        <h1>Turmas</h1>
+    </header>
+
+    <div class="container">
+        <div class="modal">
+
+            <div class="formTurma">
+                <label for="text">Turma a ser criada</label>
+                <div class="input-line"><input placeholder="ex: 1A" maxlength="2" pattern="\d{2}" type="text"
+                        id="turma"></div>
+
+                <button class="criarTurmas" onclick="criarTurma(event)">Criar turma</button>
+
+            </div>
+
+        </div>
+
+
+        <button class="visualizarTurmas" onclick="visualizarTurmas(event)">Visualizar turmas</button>
+
+    </div>
+
+    <script src="turmas.js"></script>
+    <script src="https://kit.fontawesome.com/a03d84a9ee.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

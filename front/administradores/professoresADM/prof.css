@@ -1,0 +1,238 @@
+:root {
+    --cor-pretoTextos: #141216;
+    --cor-cinzaPrimario: #cfd5dd;
+    --cor-cinzaSecundario: #c3cbd5;
+    --cor-laranjaDetalhes: #f3621f;
+    --cor-branco: #fff;
+    --cor-sombra: rgba(0, 0, 0, 0.12);
+}
+
+body {
+    background: linear-gradient(135deg, #e8eaef 0%, #f7f7fa 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-cinzaSecundario);
+    height: 70px;
+    box-shadow: 0 2px 8px var(--cor-sombra);
+}
+
+h2 {
+    color: var(--cor-laranjaDetalhes);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h1 {
+    color: var(--cor-laranjaDetalhes);
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.modal {
+    background: var(--cor-branco);
+    padding: 40px 32px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 32px var(--cor-sombra);
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modal:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.formProfessor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--cor-pretoTextos);
+    margin-bottom: 8px;
+}
+
+.input-line {
+    width: 100%;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 18px;
+    transition: border-color 0.2s;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    background: transparent;
+    font-size: 16px;
+    color: var(--cor-pretoTextos);
+    transition: color 0.2s;
+}
+
+input:focus {
+    color: var(--cor-laranjaDetalhes);
+}
+
+.input-line:focus-within {
+    border-bottom: 2px solid var(--cor-laranjaDetalhes);
+}
+
+.cadastrarProfessor {
+    background: linear-gradient(90deg, #f3621f 70%, #ff8c42 100%);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 32px;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px var(--cor-sombra);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.cadastrarProfessor:hover {
+    background: linear-gradient(90deg, #ff8c42 70%, #f3621f 100%);
+    box-shadow: 0 4px 16px rgba(243, 98, 31, 0.18);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.checkbox-group label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cor-pretoTextos);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    accent-color: var(--cor-laranjaDetalhes);
+    /* cor da caixinha */
+    transform: scale(1.2);
+}
+
+.professor {
+    background: #f7f7fa;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 18px 20px 12px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px var(--cor-sombra);
+    transition: box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+    text-align: left;
+}
+
+.professor:hover {
+    box-shadow: 0 4px 16px rgba(243, 98, 31, 0.13);
+}
+
+.professor p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: var(--cor-pretoTextos);
+}
+
+.professor strong {
+    color: var(--cor-laranjaDetalhes);
+}
+/* 
+
+.botoes {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    gap: 18px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.botoes button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.botoes i {
+    pointer-events: none;
+} */
+
+@media (max-width: 500px) {
+    header {
+        height: 56px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        margin-top: 40px;
+        padding: 0 8px;
+    }
+
+    .modal {
+        width: 200px;
+        padding: 40px 32px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .visualizarTurmas {
+        width: 50%;
+    }
+
+    .professor {
+        padding: 12px 8px 8px 8px;
+        font-size: 0.95rem;
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+}
